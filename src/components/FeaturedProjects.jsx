@@ -172,23 +172,255 @@
 
 /**Wider canvas */
 
+// import React from "react";
+// import { motion } from "framer-motion";
+
+// const projects = [
+//   {
+//     title: "HealthSync Platform",
+//     category: "Healthcare IT",
+//     tech: ["React", "Node.js", "PostgreSQL", "AWS"],
+//     bgClass: "bg-[#050b14]" // Deep navy block like your screenshot
+//   },
+//   {
+//     title: "Fintech Dashboard",
+//     category: "Financial Systems",
+//     tech: ["Angular", "Tailwind", "Python", "Docker"],
+//     bgClass: "bg-[#0a0a0a]"
+//   }
+// ];
+
+// const FeaturedProjects = () => {
+//   return (
+//     <section id="work" className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
+      
+//       <div className="mb-16">
+//         <h2 className="text-4xl md:text-5xl text-slate-900 dark:text-white leading-none tracking-tight" style={{ fontFamily: '"Playfair Display", serif' }}>
+//           Selected Work
+//         </h2>
+//       </div>
+
+//       <div className="flex flex-col gap-8 md:gap-12">
+//   {projects.map((project) => (
+//            <div 
+//             key={project.id}
+//             /* h-[350px] on mobile, md:h-[500px] on desktop */
+//             className="group relative w-full h-[350px] md:h-[500px] bg-[#0a0f1c] rounded-2xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-500"
+//           >
+//             {/* Faint Grid Background (matches your screenshot) */}
+//             <div 
+//               className="absolute inset-0 opacity-20 pointer-events-none" 
+//               style={{
+//                 backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
+//                 backgroundSize: '40px 40px'
+//               }}
+//             ></div>
+
+// //             {/* Content Container
+// //                 opacity-100 = Always visible on mobile
+// //                 lg:opacity-0 = Hidden by default on large desktops
+// //                 lg:group-hover:opacity-100 = Visible on hover on large desktops 
+// //             */}
+//          <div className="absolute bottom-0 left-0 w-full p-6 md:p-10 
+//                              opacity-100 lg:opacity-0 lg:group-hover:opacity-100 
+//                             transition-all duration-300 ease-in-out
+//                             bg-gradient-to-t from-[#0a0f1c] via-[#0a0f1c]/90 to-transparent">
+              
+//               <span className="text-[#ff5a36] text-xs md:text-sm font-bold tracking-wider uppercase mb-2 block">
+//                 {project.category}
+//               </span>
+              
+//               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tight">
+//                 {project.title}
+//               </h2>
+              
+//               {/* Tech Stack Pills */}
+//               <div className="flex flex-wrap gap-2 md:gap-3">
+//                 {project.techStack.map((tech, index) => (
+//                   <span 
+//                     key={index}
+//                     className="px-3 md:px-4 py-1.5 rounded-full border border-slate-700 bg-slate-800/50 text-slate-300 text-xs md:text-sm transition-colors hover:border-slate-500 hover:text-white cursor-default"
+//                   >
+//                     {tech}
+//                   </span>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+      
+//     </section>
+//   );
+
+
+
+// };
+
+// export default FeaturedProjects;
+
+
+
+
+// // 3 last one code 
+// import React from 'react';
+
+// const PortfolioSection = () => {
+//   // Data based on your screenshots
+//   const projects = [
+//     {
+//       id: 1,
+//       category: "FINANCIAL SYSTEMS",
+//       title: "Fintech Dashboard",
+//       techStack: ["Angular", "Tailwind", "Python", "Docker"],
+//     },
+//     {
+//       id: 2,
+//       category: "HEALTHCARE IT",
+//       title: "HealthSync Platform",
+//       techStack: ["React", "Node.js", "PostgreSQL", "AWS"],
+//     }
+//   ];
+
+//   return (
+//     <section className="py-12 md:py-24 px-4 md:px-12 max-w-7xl mx-auto w-full">
+    
+//       <div className="flex flex-col gap-8 md:gap-12">
+//         {projects.map((project) => (
+//           <div 
+//             key={project.id}
+//             /* h-[350px] on mobile, md:h-[500px] on desktop */
+//             className="group relative w-full h-[350px] md:h-[500px] bg-[#0a0f1c] rounded-2xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-500"
+//           >
+//             {/* Faint Grid Background (matches your screenshot) */}
+//             <div 
+//               className="absolute inset-0 opacity-20 pointer-events-none" 
+//               style={{
+//                 backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
+//                 backgroundSize: '40px 40px'
+//               }}
+//             ></div>
+
+//             {/* Content Container
+//                 opacity-100 = Always visible on mobile
+//                 lg:opacity-0 = Hidden by default on large desktops
+//                 lg:group-hover:opacity-100 = Visible on hover on large desktops 
+//             */}
+//             <div className="absolute bottom-0 left-0 w-full p-6 md:p-10 
+//                             opacity-100 lg:opacity-0 lg:group-hover:opacity-100 
+//                             transition-all duration-300 ease-in-out
+//                             bg-gradient-to-t from-[#0a0f1c] via-[#0a0f1c]/90 to-transparent">
+              
+//               <span className="text-[#ff5a36] text-xs md:text-sm font-bold tracking-wider uppercase mb-2 block">
+//                 {project.category}
+//               </span>
+              
+//               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tight">
+//                 {project.title}
+//               </h2>
+              
+//               {/* Tech Stack Pills */}
+//               <div className="flex flex-wrap gap-2 md:gap-3">
+//                 {project.techStack.map((tech, index) => (
+//                   <span 
+//                     key={index}
+//                     className="px-3 md:px-4 py-1.5 rounded-full border border-slate-700 bg-slate-800/50 text-slate-300 text-xs md:text-sm transition-colors hover:border-slate-500 hover:text-white cursor-default"
+//                   >
+//                     {tech}
+//                   </span>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+
+
+//     </section>
+//   );
+// };
+
+// export default PortfolioSection;
+
+
+
+
+// main cars
+//  <div className="flex flex-col gap-12">
+//         {projects.map((project, idx) => (
+//           <motion.div
+//             key={idx}
+//             initial={{ opacity: 0, y: 40 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             viewport={{ once: true, amount: 0.2 }}
+//             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+//             className={`relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden group cursor-pointer border border-slate-300 dark:border-slate-800 ${project.bgClass}`}
+//           >
+//             {/* The Blueprint Grid Pattern */}
+//             <div 
+//               className="absolute inset-0 opacity-20 transition-opacity duration-700 group-hover:opacity-40"
+//               style={{
+//                 backgroundImage: `linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)`,
+//                 backgroundSize: '40px 40px'
+//               }}
+//             />
+
+//             {/* Hover Reveal Content (Slides up from bottom) */}
+//             <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end bg-gradient-to-t from-[#050b14] to-transparent h-1/2">
+//               <p className="text-brandOrange text-xs font-bold uppercase tracking-widest mb-2">
+//                 {project.category}
+//               </p>
+//               <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+//                 {project.title}
+//               </h3>
+              
+//               <div className="flex gap-3 flex-wrap">
+//                 {project.tech.map(t => (
+//                   <span key={t} className="px-3 py-1 rounded-full border border-slate-700 bg-slate-900/80 text-slate-300 text-xs font-medium backdrop-blur-sm">
+//                     {t}
+//                   </span>
+//                 ))}
+//               </div>
+//             </div>
+//           </motion.div>
+//         ))}
+//       </div>
+
+
+
+
+// final;
 import React from "react";
-import { motion } from "framer-motion";
 
 const projects = [
   {
+    id: 1, 
     title: "HealthSync Platform",
     category: "Healthcare IT",
     tech: ["React", "Node.js", "PostgreSQL", "AWS"],
-    bgClass: "bg-[#050b14]" // Deep navy block like your screenshot
+    bgClass: "bg-[#050b14]",
+    link: "" ,// Added a placeholder link for future routing,
+    image: "https://www.shambhavitechnovation.com/assets/images/banner/1.jpg" // <--- ADD THIS LINE
   },
   {
+    id: 2,
     title: "Fintech Dashboard",
     category: "Financial Systems",
     tech: ["Angular", "Tailwind", "Python", "Docker"],
-    bgClass: "bg-[#0a0a0a]"
+    bgClass: "bg-[#0a0a0a]",
+    link: "" ,// Added a placeholder link for future routing,
+    image: "https://www.shambhavitechnovation.com/assets/images/banner/2.jpg" // <--- ADD THIS LINE
+  },
+  {
+    id: 2,
+    title: "Fintech Dashboard",
+    category: "Financial Systems",
+    tech: ["Angular", "Tailwind", "Python", "Docker"],
+    bgClass: "bg-[#0a0a0a]",
+    link: "" ,// Added a placeholder link for future routing,
+    image: "https://www.shambhavitechnovation.com/assets/images/banner/2.jpg" // <--- ADD THIS LINE
   }
-];
+];  
 
 const FeaturedProjects = () => {
   return (
@@ -200,45 +432,70 @@ const FeaturedProjects = () => {
         </h2>
       </div>
 
-      <div className="flex flex-col gap-12">
-        {projects.map((project, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className={`relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden group cursor-pointer border border-slate-300 dark:border-slate-800 ${project.bgClass}`}
+      <div className="flex flex-col gap-8 md:gap-12">
+        {projects.map((project) => (
+          /* CHANGED TO <a> TAG: 
+             Added 'block' and 'cursor-pointer' to make the whole area clickable.
+             Added 'hover:-translate-y-2' and 'hover:shadow-2xl' for visual feedback.
+          */
+          <a 
+            key={project.id}
+            href={project.link}
+            onClick={(e) => {
+              // Optional: Remove this preventDefault when you add real links
+              if (project.link === "#") e.preventDefault(); 
+            }}
+            className={`group relative w-full h-[260px] md:h-[500px] ${project.bgClass} rounded-2xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-500`}
           >
-            {/* The Blueprint Grid Pattern */}
-            <div 
-              className="absolute inset-0 opacity-20 transition-opacity duration-700 group-hover:opacity-40"
+            {/* className={`block cursor-pointer group relative w-full h-[350px] md:h-[500px] ${project.bgClass} rounded-2xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brandOrange/5 hover:border-slate-700`} */}
+            {/* Faint Grid Background */}
+            {/* <div 
+              className="absolute inset-0 opacity-20 pointer-events-none" 
               style={{
-                backgroundImage: `linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)`,
+                backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
                 backgroundSize: '40px 40px'
               }}
-            />
-
-            {/* Hover Reveal Content (Slides up from bottom) */}
-            <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end bg-gradient-to-t from-[#050b14] to-transparent h-1/2">
-              <p className="text-brandOrange text-xs font-bold uppercase tracking-widest mb-2">
-                {project.category}
-              </p>
-              <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                {project.title}
-              </h3>
+            ></div> */}
+{/* Photo Background with Dark Overlay */}
+            <div className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl z-0">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              {/* Dark overlay to keep text readable */}
+              <div className="absolute inset-0 bg-[#0a0f1c]/60 group-hover:bg-[#0a0f1c]/40 transition-colors duration-500"></div>
+            </div>
+            {/* Content Container */}
+            <div className="absolute bottom-0 left-0 w-full p-6 md:p-10 
+                            opacity-100 lg:opacity-0 lg:group-hover:opacity-100 
+                            transition-all duration-300 ease-in-out
+                            bg-gradient-to-t from-[#0a0f1c] via-[#0a0f1c]/90 to-transparent">
               
-              <div className="flex gap-3 flex-wrap">
-                {project.tech.map(t => (
-                  <span key={t} className="px-3 py-1 rounded-full border border-slate-700 bg-slate-900/80 text-slate-300 text-xs font-medium backdrop-blur-sm">
-                    {t}
+              <span className="text-[#ff5a36] text-xs md:text-sm font-bold tracking-wider uppercase mb-2 block">
+                {project.category}
+              </span>
+              
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tight">
+                {project.title}
+              </h2>
+              
+              {/* Tech Stack Pills */}
+              <div className="flex flex-wrap gap-2 md:gap-3">
+                {project.tech.map((techItem, index) => (
+                  <span 
+                    key={index}
+                    className="px-3 md:px-4 py-1.5 rounded-full border border-slate-700 bg-slate-800/50 text-slate-300 text-xs md:text-sm transition-colors hover:border-slate-500 hover:text-white"
+                  >
+                    {techItem}
                   </span>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </a>
         ))}
       </div>
+      
     </section>
   );
 };
