@@ -1,0 +1,32 @@
+[docs]
+[public]
+  - favicon.svg
+  - icons.svg
+[src]
+  [assets]
+    - hero.png
+    - react.svg
+    - vite.svg
+  [components]
+    - Contact.jsx
+    - Faq.jsx
+    - FeaturedProjects.jsx
+    - Footer.jsx
+    - Header.jsx
+    - Hero.jsx
+  [css]
+    - Footer.css
+    - Header.css
+  [pages]
+    - Home.jsx
+  - App.css
+  - App.jsx
+  - index.css
+  - main.jsx
+- .gitignore
+- README.md
+- eslint.config.js
+- index.html
+- package-lock.json
+- package.json
+- vite.config.js

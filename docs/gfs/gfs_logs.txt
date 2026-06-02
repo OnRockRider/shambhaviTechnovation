@@ -1,0 +1,6 @@
+[2026-06-02T09:43:15.144Z] [INFO]: Created .gfs_ignore. You can extend this with more ignore patterns.
+[2026-06-02T09:43:15.146Z] [INFO]: Created .gfs_include. You can add patterns to override exclusions.
+[2026-06-02T09:43:15.251Z] [INFO]: Ignoring: .git
+[2026-06-02T09:43:15.276Z] [INFO]: Ignoring: node_modules
+[2026-06-02T09:43:15.277Z] [INFO]: Ignoring: gfs
+[2026-06-02T09:43:15.295Z] [INFO]: Folder structure written to: d:\projects\shambhavi-v2\docs\project_structure.txt
