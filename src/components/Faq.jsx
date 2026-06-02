@@ -132,10 +132,10 @@ const Faq = () => {
     // Changed padding and background handling for the section
     <section id="faq" className="py-24 px-6 md:px-12 max-w-4xl mx-auto w-full">
       
-      <div className="mb-16">
-        <h2 className="text-4xl md:text-5xl text-slate-900 dark:text-white font-black tracking-tighter uppercase leading-none">
-          System <br />
-          <span className="text-slate-500">Queries</span>
+      <div className="mb-16 text-center">
+        <h2 className="text-4xl md:text-5xl text-slate-900 dark:text-white font-black tracking-tighter uppercase leading-none ">
+          Frequently Asked <br />
+          <span className="text-slate-500">Questions</span>
         </h2>
       </div>
 
