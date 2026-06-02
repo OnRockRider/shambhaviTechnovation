@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
+import Services from '../components/Services';
 import FeaturedProjects from '../components/FeaturedProjects';
 import Faq from '../components/Faq';
 import Contact from '../components/Contact';
@@ -30,6 +31,10 @@ const Home = () => {
       
       <div id="home" className="bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500">
         <Hero />
+      </div>
+
+      <div id="services" className="bg-white dark:bg-black transition-colors duration-500 border-t border-slate-200 dark:border-slate-900">
+        <Services />
       </div>
 
       <div id="work" className="bg-white dark:bg-black transition-colors duration-500 border-t border-slate-200 dark:border-slate-900">
