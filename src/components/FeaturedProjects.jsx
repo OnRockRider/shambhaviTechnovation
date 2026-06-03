@@ -400,7 +400,7 @@ const projects = [
     tech: ["React", "Node.js", "PostgreSQL", "AWS"],
     bgClass: "bg-[#050b14]",
     link: "" ,// Added a placeholder link for future routing,
-    image: "https://www.shambhavitechnovation.com/assets/images/banner/1.jpg" // <--- ADD THIS LINE
+    image: ""
   },
   {
     id: 2,
@@ -409,7 +409,7 @@ const projects = [
     tech: ["Angular", "Tailwind", "Python", "Docker"],
     bgClass: "bg-[#0a0a0a]",
     link: "" ,// Added a placeholder link for future routing,
-    image: "https://www.shambhavitechnovation.com/assets/images/banner/2.jpg" // <--- ADD THIS LINE
+    image: ""
   },
   {
     id: 2,
@@ -418,7 +418,7 @@ const projects = [
     tech: ["Angular", "Tailwind", "Python", "Docker"],
     bgClass: "bg-[#0a0a0a]",
     link: "" ,// Added a placeholder link for future routing,
-    image: "https://www.shambhavitechnovation.com/assets/images/banner/2.jpg" // <--- ADD THIS LINE
+    image: ""
   }
 ];  
 
