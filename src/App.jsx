@@ -19,10 +19,13 @@ function App() {
             {/* All these paths render the Home component, and the useEffect inside Home handles the scrolling */}
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Home />} />
+            <Route path="/services/:slug" element={<ServiceDetail />} />
+            <Route path="/products" element={<Home />} /> 
+            <Route path="/products/explore" element={<ServiceDetail pageType="products" />} />
             <Route path="/work" element={<Home />} />
+            <Route path="/work/explore" element={<ServiceDetail pageType="work" />} />
             <Route path="/contact" element={<Home />} />
             <Route path="/faq" element={<Home />} />
-            <Route path="/services/:slug" element={<ServiceDetail />} />
           </Routes>
         </main>
         

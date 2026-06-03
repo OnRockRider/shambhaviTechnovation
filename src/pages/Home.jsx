@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
+import Products from '../components/Products';
 import FeaturedProjects from '../components/FeaturedProjects';
 import Faq from '../components/Faq';
 import Contact from '../components/Contact';
@@ -9,32 +10,33 @@ import Contact from '../components/Contact';
 const Home = () => {
   const location = useLocation();
 
-  // The Route Interceptor for Smooth Scrolling
   useEffect(() => {
     const path = location.pathname.replace('/', ''); 
     
-    if (path) {
+    if (path && !path.includes('explore')) {
       const element = document.getElementById(path);
       if (element) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100); 
       }
-    } else {
+    } else if (location.pathname === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [location]);
 
   return (
     <>
-      {/* Notice the ID tags added to each wrapper block */}
-      
       <div id="home" className="bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500">
         <Hero />
       </div>
 
       <div id="services" className="bg-white dark:bg-black transition-colors duration-500 border-t border-slate-200 dark:border-slate-900">
         <Services />
+      </div>
+
+      <div id="products" className="bg-white dark:bg-black transition-colors duration-500 border-t border-slate-200 dark:border-slate-900">
+        <Products />
       </div>
 
       <div id="work" className="bg-white dark:bg-black transition-colors duration-500 border-t border-slate-200 dark:border-slate-900">
