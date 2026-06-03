@@ -123,7 +123,7 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full mt-12 border-t border-slate-200 dark:border-slate-800 transition-colors duration-500">
+    <section id="contact" className="py-12 px-6 md:px-12 max-w-7xl mx-auto w-full border-t border-slate-200 dark:border-slate-800 transition-colors duration-500">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 pt-12">
         
         {/* Left Side: Playfair Typography */}
