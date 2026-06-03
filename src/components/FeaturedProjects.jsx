@@ -149,25 +149,25 @@ const projects = [
     bgClass: "bg-[#0a0a0a]",
     link: "/work/explore",
     image: "/images/wikipoint.png" // Points to your public folder!
-  },
-  {
-    id: 3,
-    title: "E-Commerce Engine",
-    category: "Retail Tech",
-    tech: ["Next.js", "Tailwind", "Stripe"],
-    bgClass: "bg-[#050b14]",
-    link: "/work/ecommerce-engine",
-    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    id: 4,
-    title: "SaaS Analytics",
-    category: "Data Visualization",
-    tech: ["Vue", "D3.js", "AWS"],
-    bgClass: "bg-[#0a0a0a]",
-    link: "/work/saas-analytics",
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop"
   }
+  // {
+  //   id: 3,
+  //   title: "E-Commerce Engine",
+  //   category: "Retail Tech",
+  //   tech: ["Next.js", "Tailwind", "Stripe"],
+  //   bgClass: "bg-[#050b14]",
+  //   link: "/work/ecommerce-engine",
+  //   image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop"
+  // },
+  // {
+  //   id: 4,
+  //   title: "SaaS Analytics",
+  //   category: "Data Visualization",
+  //   tech: ["Vue", "D3.js", "AWS"],
+  //   bgClass: "bg-[#0a0a0a]",
+  //   link: "/work/saas-analytics",
+  //   image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop"
+  // }
 ];
 
 const FeaturedProjects = () => {
