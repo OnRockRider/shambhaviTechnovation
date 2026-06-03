@@ -12,7 +12,7 @@ const Header = () => {
     document.documentElement.classList.toggle('dark');
   };
 
-  const navItems = ['Home', 'Services', 'Work', 'Contact'];
+  const navItems = ['Home', 'Services', 'Products', 'Work', 'Contact'];
 
   return (
     <header className="fixed top-0 w-full z-50 bg-[#faf9f6]/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors duration-500">

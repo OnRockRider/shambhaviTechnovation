@@ -290,6 +290,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -347,16 +348,19 @@ const Hero = () => {
             // Mobile: Buttons are centered, take full width, smaller padding. Desktop: Auto width, larger.
             className="mt-10 lg:mt-12 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 lg:gap-6 w-full sm:w-auto"
           >
-            <button className="px-6 py-3 md:px-8 md:py-4 bg-slate-900 text-white font-medium text-xs md:text-sm tracking-widest uppercase hover:bg-brandOrange transition-colors duration-300 w-full sm:w-auto">
-              <a href='./contact'>
+            <Link 
+              to="/contact" 
+              className="inline-block text-center px-6 py-3 md:px-8 md:py-4 bg-slate-900 text-white font-medium text-xs md:text-sm tracking-widest uppercase hover:bg-brandOrange transition-colors duration-300 w-full sm:w-auto"
+            >
               Start a Project
-              </a>
-            </button>
-            <button className="px-6 py-3 md:px-8 md:py-4 border border-slate-300 text-slate-700 font-medium text-xs md:text-sm tracking-widest uppercase hover:border-slate-900 hover:text-slate-900 transition-colors duration-300 w-full sm:w-auto">
-              <a href='./work'>
+            </Link>
+
+            <Link 
+              to="/work" 
+              className="inline-block text-center px-6 py-3 md:px-8 md:py-4 border border-slate-300 text-slate-700 font-medium text-xs md:text-sm tracking-widest uppercase hover:border-slate-900 hover:text-slate-900 transition-colors duration-300 w-full sm:w-auto"
+            >
               Our Work
-              </a>
-            </button>
+            </Link>
           </motion.div>
         </div>
 
