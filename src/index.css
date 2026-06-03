@@ -4,18 +4,20 @@
   --color-brandOrange: #FF5722;
 }
 
-/* Enable manual dark mode toggle */
-@custom-variant dark {
-  &:where(.dark, .dark *)
-}
+/* 1. YAHAN FIX KIYA HAI: Tailwind v4 ka correct syntax manual dark mode ke liye */
+@variant dark (&:is(.dark *));
+
+/* 2. Default (Light Mode) Body */
 body {
   @apply bg-[#faf9f6] text-slate-900 transition-colors duration-500;
 }
 
+/* 3. Dark Mode Body */
 .dark body {
   @apply bg-slate-950 text-white;
 }
 
+/* Iske niche aapka purana @layer components wala code waise hi rehne dein... */
 @layer components {
   .nav-underline {
     @apply relative inline-block text-slate-600 dark:text-slate-300 no-underline pb-1 transition-colors duration-300 hover:text-slate-900 dark:hover:text-white;
