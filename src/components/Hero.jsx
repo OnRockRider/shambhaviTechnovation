@@ -348,10 +348,14 @@ const Hero = () => {
             className="mt-10 lg:mt-12 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 lg:gap-6 w-full sm:w-auto"
           >
             <button className="px-6 py-3 md:px-8 md:py-4 bg-slate-900 text-white font-medium text-xs md:text-sm tracking-widest uppercase hover:bg-brandOrange transition-colors duration-300 w-full sm:w-auto">
+              <a href='./contact'>
               Start a Project
+              </a>
             </button>
             <button className="px-6 py-3 md:px-8 md:py-4 border border-slate-300 text-slate-700 font-medium text-xs md:text-sm tracking-widest uppercase hover:border-slate-900 hover:text-slate-900 transition-colors duration-300 w-full sm:w-auto">
+              <a href='./work'>
               Our Work
+              </a>
             </button>
           </motion.div>
         </div>
