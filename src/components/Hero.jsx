@@ -41,6 +41,12 @@ const Hero = () => {
             <span className="relative inline-block mt-2 text-slate-700 dark:text-slate-100">
               experiences.
             </span>
+            {/* <span className="relative inline-block mt-2 bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-400 text-transparent bg-clip-text">
+  experiences.
+</span> */}
+{/* <span className="relative inline-block mt-2 bg-gradient-to-r from-indigo-600 via-blue-500 to-sky-400 text-transparent bg-clip-text">
+  experiences.
+</span> */}
           </motion.h1>
 
           <motion.p
