@@ -243,10 +243,11 @@ const FeaturedProjects = () => {
         <Link 
           to="/work/explore"
           onClick={() => window.scrollTo(0, 0)}
-          className="group relative inline-flex items-center justify-center px-10 py-4 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 uppercase tracking-widest text-sm font-medium overflow-hidden"
+          className="group relative inline-flex items-center justify-center px-10 py-4 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 uppercase tracking-widest text-sm font-medium overflow-hidden transition-colors duration-500 hover:text-white hover:border-brandOrange z-10"
         >
-          <span className="absolute inset-0 bg-brandOrange origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></span>
-          <span className="relative z-10 group-hover:text-white transition-colors duration-300 delay-75">
+          <span className="absolute w-[300px] h-[300px] bg-brandOrange rounded-full -left-[150%] top-[100%] transition-all duration-700 ease-out group-hover:-top-[50px] group-hover:-left-[50px] -z-10"></span>
+          
+          <span className="relative z-10">
             Explore
           </span>
         </Link>

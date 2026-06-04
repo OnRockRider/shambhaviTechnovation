@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500 px-6 md:px-12 overflow-hidden">
+    // <section className="relative min-h-screen flex items-center justify-center bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500 px-6 md:px-12 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-12 md:pt-32 lg:pt-20 bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500 px-6 md:px-12 overflow-hidden">
       
       {/* 1. Artistic Graph Paper Background */}
       <div 
@@ -63,7 +64,7 @@ const Hero = () => {
 
             <Link 
               to="/work" 
-              className="inline-block text-center px-6 py-3 md:px-8 md:py-4 border border-slate-300 text-slate-700 font-medium text-xs md:text-sm tracking-widest uppercase hover:border-slate-900 hover:text-slate-900 transition-colors duration-300 w-full sm:w-auto"
+              className="inline-block text-center px-6 py-3 md:px-8 md:py-4 border border-slate-300 dark:border-slate-200 text-slate-700 dark:text-white font-medium text-xs md:text-sm tracking-widest uppercase hover:border-brandOrange dark:hover:border-brandOrange hover:text-slate-900 dark:hover:text-white transition-colors duration-300 w-full sm:w-auto"
             >
               Our Work
             </Link>

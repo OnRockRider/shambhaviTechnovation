@@ -25,6 +25,30 @@ const Home = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    // Grab all the main sections on the homepage
+    const sections = document.querySelectorAll('div[id="home"], div[id="services"], div[id="products"], div[id="work"], div[id="faq"], div[id="contact"]');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // When a section takes up at least 50% of the screen
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          const newPath = id === 'home' ? '/' : `/${id}`;
+          
+          // Silently update the URL bar WITHOUT triggering a React refresh
+          if (window.location.pathname !== newPath) {
+            window.history.replaceState(null, '', newPath);
+          }
+        }
+      });
+    }, { threshold: 0.5 }); // 0.5 means 50% of the section must be visible
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
+
   return (
     <>
       <div id="home" className="bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500">
