@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
 import './css/Footer.css';
 import Team from './pages/Team';
+import ScrollToTopButton from './components/ScrollToTopButton';
 function App() {
   return (
     <BrowserRouter>
@@ -31,7 +32,7 @@ function App() {
         </main>
         
         <Footer />
-        
+        <ScrollToTopButton />
       </div>
     </BrowserRouter>
   );
