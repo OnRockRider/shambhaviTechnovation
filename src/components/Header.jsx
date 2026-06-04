@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
+import logoDesign from '/images/logo-design.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,9 +18,13 @@ const Header = () => {
         <Link 
           to="/" 
           onClick={() => setIsMenuOpen(false)}
-          className="font-black text-xl tracking-tighter text-slate-900 dark:text-white"
+          className="inline-flex items-center shrink-0"
         >
-          SHAMBHAVI<span className="text-brandOrange">.</span>
+          <img
+            src={logoDesign}
+            alt="Shambhavi Technovation"
+            className="h-10 w-auto max-w-[180px] object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}

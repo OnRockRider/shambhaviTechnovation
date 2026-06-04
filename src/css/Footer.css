@@ -49,6 +49,15 @@
     margin-bottom: 20px;
 }
 
+.footer-brand-logo {
+    display: block;
+    width: auto;
+    height: 40px;
+    max-width: 180px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
 .footer-brand p {
     color: #9ca3af;
     line-height: 1.8;

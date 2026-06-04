@@ -223,6 +223,7 @@
 
 // new version of footer with improved color scheme and layout
 import "../css/Footer.css";
+import logoDesign from '/images/logo-design.png';
 
 function Footer() {
   return (
@@ -231,7 +232,11 @@ function Footer() {
 
         {/* Brand Section */}
         <div className="footer-brand">
-          <h2>SHAMBHAVI</h2>
+          <img
+            src={logoDesign}
+            alt="Shambhavi Technovation"
+            className="footer-brand-logo"
+          />
           <p>
             Architecting the future of software
             development with precision and innovation.
