@@ -173,7 +173,7 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button className="mt-4 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-medium text-sm tracking-widest uppercase rounded-lg hover:bg-brandOrange dark:hover:bg-brandOrange hover:text-white transition-colors self-start">
+            <button className="mt-4 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-medium text-sm tracking-widest uppercase rounded-lg hover:bg-brandOrange dark:hover:bg-brandOrange hover:text-white transition-colors self-center lg:self-start">
               Initialize Project
             </button>
             

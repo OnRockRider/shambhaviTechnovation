@@ -211,6 +211,10 @@
         gap: 40px;
     }
 
+    .footer-brand-logo {
+        margin: 0 auto 20px auto;
+    }
+
     /* --- NEW FIX FOR MOBILE --- */
     /* Mobile me aate hi wrapper wapas aa jayega aur 2 column bana dega */
 /* --- NEW FIX FOR MOBILE --- */

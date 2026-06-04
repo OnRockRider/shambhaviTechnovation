@@ -32,12 +32,21 @@ const Hero = () => {
             className="text-5xl md:text-7xl lg:text-[5.5rem] text-slate-900 dark:text-white transition-colors duration-500 leading-[1.1] tracking-tight"
             style={{ fontFamily: '"Playfair Display", serif' }}
           >
-            We craft <br />
-            <span className="text-slate-500 dark:text-slate-400 italic font-normal transition-colors duration-500">digital</span> <br />
-            
-            <span className="relative inline-block mt-2">
+            <span className="block text-slate-900 dark:text-white">
+              We craft
+            </span>
+            <span className="block mt-1 italic font-normal text-brandOrange dark:text-orange-300 transition-colors duration-500">
+              digital
+            </span>
+            <span className="relative inline-block mt-2 text-slate-700 dark:text-slate-100">
               experiences.
             </span>
+            {/* <span className="relative inline-block mt-2 bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-400 text-transparent bg-clip-text">
+  experiences.
+</span> */}
+{/* <span className="relative inline-block mt-2 bg-gradient-to-r from-indigo-600 via-blue-500 to-sky-400 text-transparent bg-clip-text">
+  experiences.
+</span> */}
           </motion.h1>
 
           <motion.p
