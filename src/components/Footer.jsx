@@ -1,11 +1,33 @@
 // new version of footer with improved color scheme and layout
 import "../css/Footer.css";
+import React, { useEffect, useRef } from 'react';
 import logoDesign from '/images/logo-design.png';
 import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa6";
 
 function Footer() {
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    const updateFooterHeight = () => {
+      if (footerRef.current) {
+        // This calculates the exact height of the footer in pixels
+        const height = footerRef.current.offsetHeight;
+        // This creates a global CSS variable we can use anywhere
+        document.documentElement.style.setProperty('--footer-height', `${height}px`);
+      }
+    };
+
+    // Calculate on initial load
+    updateFooterHeight();
+    
+    // Recalculate if the user resizes their browser window or rotates their phone
+    window.addEventListener('resize', updateFooterHeight);
+    
+    return () => window.removeEventListener('resize', updateFooterHeight);
+  }, []);
+
   return (
-    <footer className="footer">
+    <footer className="footer" ref={footerRef}>
       <div className="footer-container">
 
         {/* Brand Section */}
@@ -19,7 +41,7 @@ function Footer() {
             Architecting the future of software
             development with precision and innovation.
           </p>
-          <div className="flex items-center justify-center md:justify-start gap-4">
+          <div className="flex items-center justify-center md:justify-start gap-4 w-full mt-4">
           {/* LinkedIn */}
           <a 
             href="#" 
@@ -75,23 +97,16 @@ function Footer() {
 
         </div>
 
-        {/* Newsletter - Yeh apne aap un dono ke neeche aayega */}
-        <div className="footer-column newsletter-col">
-          <h4>Newsletter</h4>
-          <p className="newsletter-text">
+        <div className="footer-column updates-col">
+          <h4>Stay Updated</h4>
+          <p className="updates-text">
             Stay updated with our latest innovations.
           </p>
-          <div className="newsletter">
-            <input
-              type="email"
-              placeholder="Enter email"
-            />
-            <button>
-              Subscribe
-            </button>
+          <div className="email-form">
+            <input type="email" placeholder="Enter email" />
+            <button>Subscribe</button>
           </div>
         </div>
-
       </div>
 
       <div className="footer-bottom">
