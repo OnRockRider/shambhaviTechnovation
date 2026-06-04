@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     // <section className="relative min-h-screen flex items-center justify-center bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500 px-6 md:px-12 overflow-hidden">
-    <section className="relative min-h-screen flex items-center justify-center pt-12 md:pt-32 lg:pt-20 bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500 px-6 md:px-12 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-4 md:pt-32 lg:pt-20 bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500 px-6 md:px-12 overflow-hidden">
       
       {/* 1. Artistic Graph Paper Background */}
       <div 
