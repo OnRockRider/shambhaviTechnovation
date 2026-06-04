@@ -4,9 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer'; 
 import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
-import Team from './pages/Team';
 import './css/Footer.css';
-import ScrollToTopButton from './components/ScrollToTopButton'; // Import the new button
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,11 +14,7 @@ function App() {
         <Header />
         
         {/* The main wrapper stays here to handle the Footer stack-up effect */}
-        {/* <main className="relative z-10 bg-[#faf9f6] dark:bg-slate-950 mb-0 md:mb-[400px] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"> */}
-        <main 
-  className="relative z-10 bg-[#faf9f6] dark:bg-slate-950 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-  style={{ marginBottom: 'var(--footer-height, 0px)' }}
->
+        <main className="relative z-10 bg-[#faf9f6] dark:bg-slate-950 mb-0 md:mb-[400px] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
           <Routes>
             {/* All these paths render the Home component, and the useEffect inside Home handles the scrolling */}
             <Route path="/" element={<Home />} />
@@ -31,15 +26,11 @@ function App() {
             <Route path="/work/explore" element={<ServiceDetail pageType="work" />} />
             <Route path="/contact" element={<Home />} />
             <Route path="/faq" element={<Home />} />
-            <Route path="/team" element={<Team />} />
-
-
           </Routes>
-
         </main>
         
         <Footer />
-        <ScrollToTopButton /> {/* Add the scroll-to-top button here so it appears on all pages */}
+        
       </div>
     </BrowserRouter>
   );

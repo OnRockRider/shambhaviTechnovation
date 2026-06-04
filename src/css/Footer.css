@@ -1,13 +1,16 @@
-
 .footer {
     background: #090d12;
     padding: 100px 0 30px;
     position: fixed;
-    bottom: 0;
+    /* position: relative; */
     left: 0;
+    bottom: 0;
     width: 100%;
-    z-index: 0; /* This must be lower than the z-10 on your <main> tag! */
+    /* min-height: 600px; */
+    z-index: 1;
+    overflow: hidden;
 }
+
 /* Huge Background Text */
 .footer::before {
     content: "SHAMBHAVI";
