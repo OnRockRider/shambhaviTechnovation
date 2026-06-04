@@ -59,7 +59,9 @@ function Footer() {
           <div className="footer-column">
             <h4>Explore</h4>
             <a href="#" className="link-underline">Services</a>
-            <a href="#" className="link-underline">Portfolio</a>
+            {/* <a href="#" className="link-underline">Our Team</a>
+             */}
+             <a href="/team" className="link-underline">Our Team</a>
             <a href="#" className="link-underline">Projects</a>
             <a href="#" className="link-underline">Contact</a>
           </div>

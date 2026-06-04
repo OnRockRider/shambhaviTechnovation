@@ -4,8 +4,9 @@ import Header from './components/Header';
 import Footer from './components/Footer'; 
 import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
+import Team from './pages/Team';
 import './css/Footer.css';
-
+import ScrollToTopButton from './components/ScrollToTopButton'; // Import the new button
 function App() {
   return (
     <BrowserRouter>
@@ -26,11 +27,15 @@ function App() {
             <Route path="/work/explore" element={<ServiceDetail pageType="work" />} />
             <Route path="/contact" element={<Home />} />
             <Route path="/faq" element={<Home />} />
+            <Route path="/team" element={<Team />} />
+
+
           </Routes>
+
         </main>
         
         <Footer />
-        
+        <ScrollToTopButton /> {/* Add the scroll-to-top button here so it appears on all pages */}
       </div>
     </BrowserRouter>
   );
