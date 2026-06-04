@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
 import './css/Footer.css';
-
+import Team from './pages/Team';
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +26,7 @@ function App() {
             <Route path="/work/explore" element={<ServiceDetail pageType="work" />} />
             <Route path="/contact" element={<Home />} />
             <Route path="/faq" element={<Home />} />
+            <Route path="/team" element={<Team />} />
           </Routes>
         </main>
         
