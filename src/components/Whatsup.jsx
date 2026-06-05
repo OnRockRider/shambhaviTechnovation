@@ -29,7 +29,7 @@ const WhatsAppFloat = () => {
             }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="fixed bottom-3 left-6 z-50"
+            className="whatsapp-float fixed bottom-3 left-6 z-50"
             aria-label="Chat on WhatsApp"
         >
             <img
