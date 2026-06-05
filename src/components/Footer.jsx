@@ -86,17 +86,17 @@ function Footer() {
             {/* <a href="#" className="link-underline">Our Team</a>
              */}
              <a href="/team" className="link-underline">Our Team</a>
-            <a href="#" className="link-underline">Projects</a>
+            <a href="/products/explore" className="link-underline">Products</a>
             <a href="/contact" className="link-underline">Contact</a>
           </div>
 
           {/* Company */}
           <div className="footer-column">
             <h4>Company</h4>
-            <a href="#" className="link-underline">About</a>
-            <a href="#" className="link-underline">Careers</a>
-            <a href="#" className="link-underline">Privacy</a>
-            <a href="#" className="link-underline">Terms</a>
+            <a href="/about" className="link-underline">About</a>
+            <a href="/careers" className="link-underline">Careers</a>
+            <a href="/privacy" className="link-underline">Privacy</a>
+            <a href="/terms" className="link-underline">Terms</a>
           </div>
 
         </div>

@@ -9,7 +9,7 @@ export const teamMembers = [
     name: "Pratik Panchal",
     role: "Founder & Full Stack Developer",
     bio: "Founder of the company with expertise in Full Stack and Magento development.",
-    image: "https://www.shambhavitechnovation.com/assets/images/pratik.jpg",
+    image: "/images/pratik.jpg",
   },
   {
     id: 2,

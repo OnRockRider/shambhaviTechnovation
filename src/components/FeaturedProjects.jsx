@@ -184,58 +184,73 @@ const FeaturedProjects = () => {
       </div>
 
       {/* The New 2-Column Responsive Grid */}
+      {/* The New 2-Column Responsive Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            /* PERFORMANCE FIX 1: Increased margin so it triggers earlier, preventing scroll lag */
+            viewport={{ once: true, margin: "0px 0px -50px 0px" }} 
             transition={{ duration: 0.5, delay: index * 0.1 }}
+            /* PERFORMANCE FIX 2: Forces the browser to use the GPU for this animation */
+            className="will-change-transform transform-gpu"
           >
             {/* Clickable Card wrapper using Link */}
+            {/* <Link 
+              to={project.link}
+              onClick={() => window.scrollTo(0, 0)}
+              className={`group relative block w-full h-[320px] md:h-[400px] ${project.bgClass} rounded-2xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-500`}
+            > */}
             <Link 
   to={project.link}
   onClick={() => window.scrollTo(0, 0)}
-  className={`group relative block w-full h-[320px] md:h-[400px] ${project.bgClass} rounded-2xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-500`}
+  className={`group relative block w-full h-[320px] md:h-[400px] ${project.bgClass} rounded-2xl overflow-hidden 
+              shadow-xl dark:shadow-[0_15px_40px_rgba(255,87,34,0.08)] 
+              /* THE FIX: Frosted orange default, bright orange on hover */
+              border border-slate-200 dark:border-brandOrange/30 hover:dark:border-brandOrange/80
+              transition-all duration-500`}
 >
-  {/* Photo Background with Hover-Scroll */}
-  <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-    <img 
-      src={project.image} 
-      alt={project.title}
-      /* THE MAGIC: object-top default, object-bottom on hover, 4-second smooth scroll */
-      className="w-full h-full object-cover object-top transition-all duration-[4000ms] ease-in-out group-hover:object-bottom"
-    />
-    {/* Dark Overlay: Invisible by default, darkens on hover so text is readable */}
-    <div className="absolute inset-0 bg-[#0a0f1c]/0 group-hover:bg-[#0a0f1c]/80 transition-colors duration-500"></div>
-  </div>
+              {/* Photo Background with Hover-Scroll */}
+              <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  /* PERFORMANCE FIX 3: Added transform-gpu to the image
+                    DESIGN FIX: Changed duration-[4000ms] to duration-[8000ms] to cut speed in half 
+                  */
+                  className="w-full h-full object-cover object-top transition-all duration-[8000ms] ease-in-out group-hover:object-bottom transform-gpu will-change-[object-position]"
+                />
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-[#0a0f1c]/0 group-hover:bg-[#0a0f1c]/80 transition-colors duration-500"></div>
+              </div>
 
-  {/* Content Container: Hidden and pushed down by default, slides up on hover */}
-  <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 z-10
-                  transition-all duration-500 ease-out
-                  opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0">
-    
-    <span className="text-[#ff5a36] text-xs font-bold tracking-wider uppercase mb-2 block">
-      {project.category}
-    </span>
-    
-    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
-      {project.title}
-    </h3>
-    
-    <div className="flex flex-wrap gap-2">
-      {project.tech.map((techItem, i) => (
-        <span 
-          key={i}
-          className="px-3 py-1 rounded-md border border-slate-700 bg-slate-800/50 text-slate-300 text-[10px] md:text-xs uppercase tracking-wider transition-colors group-hover:border-slate-500 group-hover:text-white"
-        >
-          {techItem}
-        </span>
-      ))}
-    </div>
-  </div>
-</Link>
+              {/* Content Container */}
+              <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 z-10
+                              transition-all duration-500 ease-out
+                              opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0">
+                
+                <span className="text-[#ff5a36] text-xs font-bold tracking-wider uppercase mb-2 block">
+                  {project.category}
+                </span>
+                
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
+                  {project.title}
+                </h3>
+                
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((techItem, i) => (
+                    <span 
+                      key={i}
+                      className="px-3 py-1 rounded-md border border-slate-700 bg-slate-800/50 text-slate-300 text-[10px] md:text-xs uppercase tracking-wider transition-colors group-hover:border-slate-500 group-hover:text-white"
+                    >
+                      {techItem}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Link>
           </motion.div>
         ))}
       </div>
