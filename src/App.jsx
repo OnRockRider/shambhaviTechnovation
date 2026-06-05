@@ -15,7 +15,7 @@ function App() {
         <Header />
         
         {/* The main wrapper stays here to handle the Footer stack-up effect */}
-        <main className="relative z-10 bg-[#faf9f6] dark:bg-slate-950 mb-0 md:mb-[400px] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">/
+        <main className="relative z-10 bg-[#faf9f6] dark:bg-slate-950 mb-0 lg:mb-[400px] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">/
           <Routes>
             {/* All these paths render the Home component, and the useEffect inside Home handles the scrolling */}
             <Route path="/" element={<Home />} />
