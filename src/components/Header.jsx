@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -8,6 +8,14 @@ import logoDesign from '/images/logo-design.png';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = ['Home', 'Services','Products', 'Work', 'Contact'];
+
+  useEffect(() => {
+    document.body.classList.toggle('mobile-menu-open', isMenuOpen);
+
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors duration-500">

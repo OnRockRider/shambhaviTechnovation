@@ -35,59 +35,117 @@ function ChatButton() {
       "good evening",
     ];
 
-    if (greetings.some((word) => msg.includes(word))) {
-      return "Hello! 👋 How can I help you today?";
-    }
+   // Greetings
+if (greetings.some((word) => msg.includes(word))) {
+  return "Hello! 👋 Welcome to Shambhavi Technovation. We're here to help with website development, software solutions, mobile apps, and digital services. How may I assist you today?";
+}
+if (
+  msg.includes("who are you") ||
+  msg.includes("about company") ||
+  msg.includes("about shambhavi") ||
+  msg.includes("what is this")
+) {
+  return "Shambhavi Technovation is a technology company specializing in custom website development, software solutions, mobile applications, UI/UX design, and digital transformation services. We help businesses build scalable and modern digital products. For more details, please contact us at (+91) 91047 11572.";
+}
 
-    if (
-      msg.includes("who are you") ||
-      msg.includes("what is this")
-    ) {
-      return "I am Shambhavi AI, your virtual assistant for all things related to Shambhavi Technovation.";
-    }
+// Services
+if (
+  msg.includes("services") ||
+  msg.includes("what do you do")
+) {
+  return "Our services include Website Development, Custom Software Development, Mobile App Development, UI/UX Design, E-Commerce Solutions, SEO, and Digital Marketing. We provide end-to-end solutions tailored to business needs. For a detailed consultation, call us at (+91) 91047 11572.";
+}
 
-    if (msg.includes("services")) {
-      return "We provide Web Development, Mobile App Development, UI/UX Design and SEO services.";
-    }
+// Software Development
+if (
+  msg.includes("software") ||
+  msg.includes("custom software")
+) {
+  return "We develop custom software solutions tailored to your business requirements, including management systems, CRM solutions, ERP platforms, and automation tools.";
+}
 
-    if (msg.includes("contact")) {
-      return "You can contact us through the Contact section on our website.";
-    }
+// Mobile Apps
+if (
+  msg.includes("mobile app") ||
+  msg.includes("android") ||
+  msg.includes("ios")
+) {
+  return "We create high-performance mobile applications for Android and cross-platform environments with a focus on user experience, performance, and scalability.";
+}
 
-    if (/^\d+$/.test(msg)) {
-      return "Are you looking for our contact number? Please visit the Contact section of our website.";
-    }
+// UI/UX
+if (
+  msg.includes("ui") ||
+  msg.includes("ux") ||
+  msg.includes("design")
+) {
+  return "Our UI/UX design process focuses on creating visually appealing, intuitive, and user-friendly interfaces that improve customer engagement and business conversions.";
+}
 
-    if (msg.includes("react")) {
-      return "Yes, our team develops modern React applications.";
-    }
+// Project Duration
+if (
+  msg.includes("how long") ||
+  msg.includes("timeline") ||
+  msg.includes("time required")
+) {
+  return "Project timelines depend on complexity. A basic website usually takes 1-2 weeks, while custom software and advanced web applications may require several weeks or months. Contact us for an accurate estimate.";
+}
 
-    if (
-      msg.includes("price") ||
-      msg.includes("cost")
-    ) {
-      return "Project cost depends on requirements. Please contact us for a quotation.";
-    }
+// Pricing
+if (
+  msg.includes("price") ||
+  msg.includes("cost") ||
+  msg.includes("quotation")
+) {
+  return "Project pricing depends on the scope, features, and complexity of the solution. We would be happy to discuss your requirements and provide a customized quotation. Call us at (+91) 91047 11572.";
+}
 
-    if (msg.includes("website")) {
-      return "Yes, we develop modern and responsive websites.";
-    }
+// Team
+if (msg.includes("team")) {
+  return "Our team consists of experienced developers, designers, and technology consultants dedicated to delivering high-quality digital solutions.";
+}
 
-    if (msg.includes("mobile app")) {
-      return "We develop Android and cross-platform mobile applications.";
-    }
+// Portfolio
+if (
+  msg.includes("portfolio") ||
+  msg.includes("projects")
+) {
+  return "You can explore our portfolio section to view recent projects, software solutions, and websites developed by our team.";
+}
 
-    if (msg.includes("portfolio")) {
-      return "You can explore our projects in the Featured Projects section.";
-    }
+// Office Hours
+if (
+  msg.includes("timing") ||
+  msg.includes("office hours") ||
+  msg.includes("opening hours")
+) {
+  return "Our office is open Monday to Saturday from 10:00 AM to 7:00 PM. We are available during these hours to assist with inquiries and project discussions.";
+}
 
-    if (msg.includes("team")) {
-      return "We have experienced developers, designers and consultants.";
-    }
+// Contact
+if (
+  msg.includes("contact") ||
+  msg.includes("phone") ||
+  msg.includes("email")
+) {
+  return "📞 Phone: (+91) 91047 11572\n📧 Email: info@shambhavitechnovation.com\n🕒 Office Hours: 10:00 AM - 7:00 PM\n\nFeel free to contact us for project discussions or support.";
+}
 
-    if (msg.includes("location")) {
-      return "Shambhavi Technovation is based in Surat, Gujarat.";
-    }
+// Location
+if (
+  msg.includes("location") ||
+  msg.includes("address") ||
+  msg.includes("where are you")
+) {
+  return "Shambhavi Technovation is located in Ahemdabad, Gujarat, India. Please contact us for exact office details or directions.";
+}
+
+// Number Input
+if (/^\d+$/.test(msg)) {
+  return "It looks like you've entered a number. If you're looking for our contact details, you can reach us at (+91) 9104711572.";
+}
+
+   
 
     return "Thank you for contacting Shambhavi Technovation. How can I help you?";
   };
@@ -127,6 +185,7 @@ function ChatButton() {
       <button
         type="button"
         className="chat-btn"
+        style={{ zIndex: 99999 }}
         aria-label={open ? "Close chat" : "Open chat"}
         onClick={() => setOpen(!open)}
       >
@@ -134,7 +193,7 @@ function ChatButton() {
       </button>
 
       {open && (
-        <div className="chat-box">
+        <div className="chat-box" style={{ zIndex: 99998 }}>
           <div className="chat-header">
             Shambhavi AI
           </div>
