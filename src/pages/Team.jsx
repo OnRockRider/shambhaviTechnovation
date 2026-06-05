@@ -3,148 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa6";
 
-// const teamMembers = [
-//   {
-//     id: 1,
-//     name: "Pratik Panchal",
-//     role: "Founder & Full Stack Dev",
-//     bio: "Specializes in scalable backend architecture and cloud infrastructure.",
-//     image: "/images/pratik.jpg",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },
-//   {
-//     id: 2,
-//     name: "Dhruvi Chauhan",
-//     role: "Full Stack Developer",
-//     bio: "Crafting intuitive and pixel-perfect digital experiences.",
-//     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#" }
-//   },
-//   {
-//     id: 3,
-//     name: "Manali Chhatarbar",
-//     role: "Full Stack Developer",
-//     bio: "Bridging the gap between robust databases and dynamic frontends.",
-//     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },
-//   {
-//     id: 4,
-//     name: "Rahul Prajapati",
-//     role: "MERN Developer",
-//     bio: "Developing high-performance single-page applications and APIs.",
-//     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },
-//   {
-//     id: 5,
-//     name: "Sonal Patel",
-//     role: "UI/UX Designer",
-//     bio: "Creating beautiful and intuitive user experiences.",
-//     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 6,
-//     name: "Amit Singh",
-//     role: "DevOps Engineer",
-//     bio: "Ensuring seamless deployment and management of applications in cloud environments.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },
-//   {
-//     id: 7,
-//     name: "Neha Sharma",
-//     role: "QA Engineer",
-//     bio: "Ensuring the highest quality standards through rigorous testing and validation.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 8,
-//     name: "Rohit Verma",
-//     role: "Product Manager",
-//     bio: "Driving product vision and strategy to align with customer needs and business goals.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }    
-//   },{
-//     id: 9,
-//     name: "Anjali Mehta",
-//     role: "Data Scientist",
-//     bio: "Extracting insights from data to inform product decisions and strategy.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 10,
-//     name: "Vikram Desai",
-//     role: "Security Specialist",
-//     bio: "Implementing robust security measures to protect applications and data.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 12,
-//     name: "Priya Kapoor",
-//     role: "Content Strategist",
-//     bio: "Creating compelling narratives that resonate with target audiences.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 13,
-//     name: "Priya Kapoor",
-//     role: "Content Strategist",
-//     bio: "Creating compelling narratives that resonate with target audiences.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 14,
-//     name: "Priya Kapoor",
-//     role: "Content Strategist",
-//     bio: "Creating compelling narratives that resonate with target audiences.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 15,
-//     name: "Priya Kapoor",
-//     role: "Content Strategist",
-//     bio: "Creating compelling narratives that resonate with target audiences.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 16,
-//     name: "Priya Kapoor",
-//     role: "Content Strategist",
-//     bio: "Creating compelling narratives that resonate with target audiences.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 17,
-//     name: "Priya Kapoor",
-//     role: "Content Strategist",
-//     bio: "Creating compelling narratives that resonate with target audiences.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 18,
-//     name: "Priya Kapoor",
-//     role: "Content Strategist",
-//     bio: "Creating compelling narratives that resonate with target audiences.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 19,
-//     name: "Priya Kapoor",
-//     role: "Content Strategist",
-//     bio: "Creating compelling narratives that resonate with target audiences.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   },{
-//     id: 20,
-//     name: "Priya Kapoor",
-//     role: "Content Strategist",
-//     bio: "Creating compelling narratives that resonate with target audiences.",
-//     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-//     socials: { linkedin: "#", github: "#", twitter: "#" }
-//   }
-// ];
-
 export const teamMembers = [
   {
     id: 1,
@@ -152,159 +10,104 @@ export const teamMembers = [
     role: "Founder & Full Stack Developer",
     bio: "Founder of the company with expertise in Full Stack and Magento development.",
     image: "https://www.shambhavitechnovation.com/assets/images/pratik.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
   },
   {
     id: 2,
     name: "Dhruvi Chauhan",
     role: "Full Stack Developer",
     bio: "Builds modern web applications and scalable backend systems.",
-    image: "https://www.shambhavitechnovation.com/assets/images/dhruvi.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Dhruvi.png",
   },
   {
     id: 3,
-    name: "Manali Chhatarbar",
-    role: "Full Stack Developer",
-    bio: "Passionate about creating efficient and user-friendly web solutions.",
-    image: "https://www.shambhavitechnovation.com/assets/images/manali.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
-  },
-  {
-    id: 4,
-    name: "Rahul Prajapati",
-    role: "MERN Developer",
-    bio: "Develops high-performance applications using the MERN stack.",
-    image: "https://www.shambhavitechnovation.com/assets/images/rahul.png",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
-  },
-  {
-    id: 5,
-    name: "Jaimin Panchal",
-    role: "UI Developer",
-    bio: "Creates intuitive and visually appealing user interfaces.",
-    image: "https://www.shambhavitechnovation.com/assets/images/Jaimin.png",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
-  },
-  {
-    id: 6,
-    name: "Drashty Mistry",
-    role: "Quality Analyst",
-    bio: "Ensures software quality through testing and process improvement.",
-    image: "https://www.shambhavitechnovation.com/assets/images/dhrashty.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
-  },
-  {
-    id: 7,
     name: "Ronak Gandhi",
     role: "MEAN Developer",
     bio: "Builds robust web applications using the MEAN stack.",
-    image: "https://www.shambhavitechnovation.com/assets/images/ronak.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Ronak.png",
   },
   {
-    id: 8,
+    id: 4,
     name: "Devanshu Patel",
     role: "MEAN Developer",
     bio: "Focused on developing scalable and maintainable web applications.",
-    image: "https://www.shambhavitechnovation.com/assets/images/Devanshu.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Devanshu.png",
   },
   {
-    id: 9,
+    id: 5,
     name: "Neha Panchal",
     role: "Backend Developer",
     bio: "Specializes in backend systems, APIs, and database management.",
-    image: "https://www.shambhavitechnovation.com/assets/images/Neha.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Neha.png",
   },
   {
-    id: 10,
+    id: 6,
     name: "Vaidehi Khavadiya",
     role: "Online Brand Manager",
     bio: "Manages digital branding and online presence strategies.",
-    image: "https://www.shambhavitechnovation.com/assets/images/Vaidehi.png",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Vaidehi.jpg",
   },
   {
-    id: 11,
+    id: 7,
     name: "Jaimin Patel",
     role: "Junior MEAN Developer",
     bio: "Contributes to frontend and backend development projects.",
-    image: "https://www.shambhavitechnovation.com/assets/images/Jaiminpatel.jpeg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Jaimin.png",
   },
   {
-    id: 12,
+    id: 8,
     name: "Fenish Patel",
     role: "Junior MEAN Developer",
     bio: "Develops and maintains applications using the MEAN stack.",
-    image: "https://www.shambhavitechnovation.com/assets/images/Fenish.jpeg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Fenish.png",
   },
   {
-    id: 13,
+    id: 9,
     name: "Harsh Patel",
     role: "Flutter Developer",
     bio: "Builds cross-platform mobile applications with Flutter.",
-    image: "https://www.shambhavitechnovation.com/assets/images/Harsh.jpeg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Harsh-Patel.png",
   },
   {
-    id: 14,
+    id: 10,
     name: "Parth Panchal",
     role: "Full Stack Developer",
     bio: "Works across frontend and backend technologies to deliver complete solutions.",
-    image: "https://www.shambhavitechnovation.com/assets/images/Parth.jpeg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Parth.png",
   },
   {
-    id: 15,
+    id: 11,
     name: "Harsh Panchal",
     role: "MERN Developer",
     bio: "Develops modern web applications using React and Node.js.",
-    image: "https://www.shambhavitechnovation.com/assets/images/harsh-panchal.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Harsh-Panchal.png",
   },
-  // {
-  //   id: 16,
-  //   name: "Jaydip Balas",
-  //   role: "Mobile App Developer",
-  //   bio: "Specializes in designing and building mobile applications.",
-  //   image: "https://www.shambhavitechnovation.com/assets/images/jaydip.jpg",
-  //   socials: { linkedin: "#", github: "#", twitter: "#" }
-  // },
   {
-    id: 17,
+    id: 12,
     name: "Jay Prajapati",
     role: "MERN Developer",
     bio: "Focused on creating responsive and scalable web applications.",
-    image: "https://www.shambhavitechnovation.com/assets/images/jay.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Jay-Prajapati.png",
   },
   {
-    id: 18,
+    id: 13,
     name: "Vivek Patel",
     role: "MERN Developer",
     bio: "Builds end-to-end solutions using the MERN ecosystem.",
-    image: "https://www.shambhavitechnovation.com/assets/images/vivek.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Vivek.jpg",
   },
   {
-    id: 19,
+    id: 14,
     name: "Nitul Khambhalia",
     role: "MERN Developer",
     bio: "Passionate about developing performant web applications.",
-    image: "https://www.shambhavitechnovation.com/assets/images/nitul.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Nitul.png",
   },
   {
-    id: 20,
-    name: "Jay Prajapati",
+    id: 15,
+    name: "Jayesh Prajapati",
     role: "MERN Developer",
     bio: "Focused on creating responsive and scalable web applications.",
-    image: "https://www.shambhavitechnovation.com/assets/images/jay-1.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
+    image: "/team/Jayesh-Prajapati.png",
   }
 ];
 
@@ -379,7 +182,7 @@ const Team = () => {
                   {member.bio}
                 </p>
 
-                {/* Social Icons */}
+                {/* Social Icons
                 <div className="flex items-center gap-3 border-t border-slate-100 pt-4 mt-auto">
                   {member.socials.linkedin && (
                     <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#ff5a36] transition-colors duration-300">
@@ -396,7 +199,7 @@ const Team = () => {
                       <FaTwitter size={15} />
                     </a>
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
