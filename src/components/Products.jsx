@@ -8,7 +8,7 @@ const products = [
     title: "Ayumanager Pro",
     category: "Enterprise Ayush ERP",
     tech: ["NCISM Compliant", "NABH Standard"],
-    image: "/images/ayumanager.png", // Points to your public folder!
+    image: "/images/move-ayumanager.png", // Points to your public folder!
     link: "/products/explore",
     bgClass: "bg-[#050b14]"
   },
@@ -17,7 +17,7 @@ const products = [
     title: "Naturecure Tech",
     category: "Luxury Wellness Management",
     tech: ["Therapy Scheduling", "Diet Management"],
-    image: "/images/naturecure.png", // Points to your public folder!
+    image: "/images/move-naturecure.png", // Points to your public folder!
     link: "/products/explore",
     bgClass: "bg-[#0a0a0a]"
   },
@@ -64,21 +64,22 @@ const Products = () => {
               onClick={() => window.scrollTo(0, 0)}
               className={`group relative block w-full h-[280px] ${product.bgClass} rounded-2xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-500`}
             >
-              {/* Image Background */}
+              {/* Image Background with Hover-Scroll */}
               <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
                 <img 
                   src={product.image} 
                   alt={product.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  /* THE MAGIC: object-top default, object-bottom on hover, 4-second smooth scroll */
+                  className="w-full h-full object-cover object-top transition-all duration-[4000ms] ease-in-out group-hover:object-bottom"
                 />
-                {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-[#0a0f1c]/70 group-hover:bg-[#0a0f1c]/50 transition-colors duration-500"></div>
+                {/* Dark Overlay: Invisible by default, darkens on hover */}
+                <div className="absolute inset-0 bg-[#0a0f1c]/0 group-hover:bg-[#0a0f1c]/80 transition-colors duration-500"></div>
               </div>
 
-              {/* Text Content */}
-              <div className="absolute bottom-0 left-0 w-full p-6 
-                              transition-all duration-300 ease-in-out
-                              bg-gradient-to-t from-[#0a0f1c] via-[#0a0f1c]/80 to-transparent">
+              {/* Text Content: Hidden and pushed down by default, slides up on hover */}
+              <div className="absolute bottom-0 left-0 w-full p-6 z-10
+                              transition-all duration-500 ease-out
+                              opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0">
                 
                 <span className="text-[#ff5a36] text-xs font-bold tracking-wider uppercase mb-2 block">
                   {product.category}
@@ -92,6 +93,7 @@ const Products = () => {
                   {product.tech.map((techItem, i) => (
                     <span 
                       key={i}
+                      /* Added hover transitions to the tech tags so they light up too! */
                       className="px-2 py-1 rounded-md border border-slate-700 bg-slate-800/50 text-slate-300 text-[10px] uppercase tracking-wider transition-colors group-hover:border-slate-500 group-hover:text-white"
                     >
                       {techItem}
@@ -107,7 +109,7 @@ const Products = () => {
       {/* The Updated Explore Button pointing to /products/explore */}
       <div className="mt-16 flex justify-center">
         <Link 
-          to="/work/explore"
+          to="/products/explore"
           onClick={() => window.scrollTo(0, 0)}
           className="group relative inline-flex items-center justify-center px-10 py-4 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 uppercase tracking-widest text-sm font-medium overflow-hidden transition-colors duration-500 hover:text-white hover:border-brandOrange z-10"
         >

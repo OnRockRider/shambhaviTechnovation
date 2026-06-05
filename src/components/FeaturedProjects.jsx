@@ -139,7 +139,7 @@ const projects = [
     tech: ["Media Operations Engine", "Real-time Pricing"],
     bgClass: "bg-[#050b14]",
     link: "/work/explore",
-    image: "/images/beige.png" // Points to your public folder!
+    image: "/images/move-beige.app.png" // Points to your public folder!
   },
   {
     id: 2,
@@ -148,7 +148,7 @@ const projects = [
     tech: ["Voice-to-Website", "Smart Assistant"],
     bgClass: "bg-[#0a0a0a]",
     link: "/work/explore",
-    image: "/images/wikipoint.png" // Points to your public folder!
+    image: "/images/move-wikipoint.png" // Points to your public folder!
   }
   // {
   //   id: 3,
@@ -195,45 +195,47 @@ const FeaturedProjects = () => {
           >
             {/* Clickable Card wrapper using Link */}
             <Link 
-              to={project.link}
-              onClick={() => window.scrollTo(0, 0)}
-              className={`group relative block w-full h-[320px] md:h-[400px] ${project.bgClass} rounded-2xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-500`}
-            >
-              {/* Photo Background with Dark Overlay */}
-              <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-[#0a0f1c]/70 group-hover:bg-[#0a0f1c]/40 transition-colors duration-500"></div>
-              </div>
+  to={project.link}
+  onClick={() => window.scrollTo(0, 0)}
+  className={`group relative block w-full h-[320px] md:h-[400px] ${project.bgClass} rounded-2xl overflow-hidden shadow-lg border border-slate-800 transition-all duration-500`}
+>
+  {/* Photo Background with Hover-Scroll */}
+  <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+    <img 
+      src={project.image} 
+      alt={project.title}
+      /* THE MAGIC: object-top default, object-bottom on hover, 4-second smooth scroll */
+      className="w-full h-full object-cover object-top transition-all duration-[4000ms] ease-in-out group-hover:object-bottom"
+    />
+    {/* Dark Overlay: Invisible by default, darkens on hover so text is readable */}
+    <div className="absolute inset-0 bg-[#0a0f1c]/0 group-hover:bg-[#0a0f1c]/80 transition-colors duration-500"></div>
+  </div>
 
-              {/* Content Container (Matches Products layout) */}
-              <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 
-                              transition-all duration-300 ease-in-out
-                              bg-gradient-to-t from-[#0a0f1c] via-[#0a0f1c]/80 to-transparent">
-                
-                <span className="text-[#ff5a36] text-xs font-bold tracking-wider uppercase mb-2 block">
-                  {project.category}
-                </span>
-                
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
-                  {project.title}
-                </h3>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((techItem, i) => (
-                    <span 
-                      key={i}
-                      className="px-3 py-1 rounded-md border border-slate-700 bg-slate-800/50 text-slate-300 text-[10px] md:text-xs uppercase tracking-wider transition-colors group-hover:border-slate-500 group-hover:text-white"
-                    >
-                      {techItem}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Link>
+  {/* Content Container: Hidden and pushed down by default, slides up on hover */}
+  <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 z-10
+                  transition-all duration-500 ease-out
+                  opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0">
+    
+    <span className="text-[#ff5a36] text-xs font-bold tracking-wider uppercase mb-2 block">
+      {project.category}
+    </span>
+    
+    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
+      {project.title}
+    </h3>
+    
+    <div className="flex flex-wrap gap-2">
+      {project.tech.map((techItem, i) => (
+        <span 
+          key={i}
+          className="px-3 py-1 rounded-md border border-slate-700 bg-slate-800/50 text-slate-300 text-[10px] md:text-xs uppercase tracking-wider transition-colors group-hover:border-slate-500 group-hover:text-white"
+        >
+          {techItem}
+        </span>
+      ))}
+    </div>
+  </div>
+</Link>
           </motion.div>
         ))}
       </div>
@@ -248,7 +250,7 @@ const FeaturedProjects = () => {
           <span className="absolute w-[300px] h-[300px] bg-brandOrange rounded-full -left-[150%] top-[100%] transition-all duration-700 ease-out group-hover:-top-[50px] group-hover:-left-[50px] -z-10"></span>
           
           <span className="relative z-10">
-            Explore
+            View More
           </span>
         </Link>
       </div>
