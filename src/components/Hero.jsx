@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     // <section className="relative min-h-screen flex items-center justify-center bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500 px-6 md:px-12 overflow-hidden">
-    <section className="relative min-h-screen flex items-center justify-center pt-4 md:pt-32 lg:pt-20 bg-[#faf9f6] dark:bg-slate-950 transition-colors duration-500 px-6 md:px-12 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-4 md:pt-32 lg:pt-20 bg-white dark:bg-slate-950 transition-colors duration-500 px-6 md:px-12 overflow-hidden">
       
       {/* 1. Artistic Graph Paper Background */}
       <div 
@@ -82,6 +82,7 @@ const Hero = () => {
 
         {/* 3. Right Column: Dark Geometric Element */}
         {/* FIX APPLIED HERE: Added dark:opacity-30 so it shows up on mobile in dark mode, and transitioned it */}
+       
         <div className="absolute inset-0 lg:relative flex items-center justify-center h-full lg:h-[600px] w-full pointer-events-none z-0 opacity-15 dark:opacity-30 lg:opacity-100 lg:dark:opacity-100 scale-75 lg:scale-100 transition-opacity duration-500">
           
           <div className="relative w-full h-full flex items-center justify-center">
@@ -154,6 +155,8 @@ const Hero = () => {
           </div>
           
         </div>
+
+        
       </div>
     </section>
   );

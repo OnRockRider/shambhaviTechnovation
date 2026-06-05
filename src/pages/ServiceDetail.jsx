@@ -218,40 +218,40 @@ const ServiceDetail = ({ pageType = "service" }) => {
   }
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] dark:bg-slate-950 pt-32 pb-24 px-6 md:px-12 transition-colors duration-500">
+    <div className="min-h-screen bg-[#faf9f6] dark:bg-slate-950 pt-25 lg:pt-24 pb-10 lg:pb-24 px-6 md:px-12 transition-colors duration-500">
       <div className="max-w-4xl mx-auto">
         
         {/* PREMIUM SCROLL RESTORATION BUTTON */}
         <Link 
           to={backPath} 
-          className="inline-flex items-center gap-2 text-slate-500 hover:text-brandOrange transition-colors mb-12 bg-transparent border-none cursor-pointer p-0"
+          className="inline-flex items-center gap-2 text-slate-500 hover:text-brandOrange transition-colors mb-8 lg:mb-6 bg-transparent border-none cursor-pointer p-0"
         >
           <ArrowLeft size={16} />
           <span className="text-sm font-medium tracking-widest uppercase">Back to Hub</span>
         </Link>
 
-        <span className="text-brandOrange font-mono uppercase tracking-widest text-xs block mb-6">
+        <span className="text-brandOrange font-mono uppercase tracking-widest text-xs block mb-4 lg:mb-3">
           {data.tag || "// Service Specification"}
         </span>
         
-        <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Playfair Display", serif' }}>
+        <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-6 lg:mb-4" style={{ fontFamily: '"Playfair Display", serif' }}>
           {data.title}
         </h1>
         
-        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-light mb-12">
+        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-light mb-4 lg:mb-4">
           {data.subtitle}
         </p>
 
-        <div className="h-px w-full bg-slate-200 dark:bg-slate-800 mb-12" />
+        <div className="h-px w-full bg-slate-200 dark:bg-slate-800 mb-8 lg:mb-6" />
 
-        <div className="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-16">
+        <div className="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-5 lg:mb-6">
           <p>{data.content}</p>
         </div>
 
         {isExploreHub && data.items && data.items.length > 0 && (
-          <div className="flex flex-col gap-12 mt-8">
+          <div className="flex flex-col gap-8 md:gap-12">
             {data.items.map((item, index) => (
-              <div key={index} className="bg-white dark:bg-[#0a0f1c] border border-slate-200 dark:border-slate-800 rounded-2xl p-8 md:p-12 shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-colors duration-300">
+              <div key={index} className="bg-white dark:bg-[#0a0f1c] border border-slate-200 dark:border-slate-800 rounded-2xl p-6 md:p-10 lg:p-12 shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-colors duration-300">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                   <div>
                     <span className="text-brandOrange text-xs font-bold tracking-wider uppercase mb-2 block">
@@ -263,7 +263,7 @@ const ServiceDetail = ({ pageType = "service" }) => {
                     href={item.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-brandOrange dark:bg-white dark:hover:bg-brandOrange text-white dark:text-slate-900 hover:text-white transition-colors duration-300 rounded-lg text-sm font-semibold tracking-wide"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-brandOrange dark:bg-white dark:hover:bg-brandOrange text-white dark:text-slate-900 hover:text-white transition-colors duration-300 rounded-lg text-sm font-semibold tracking-wide w-full md:w-auto justify-center"
                   >
                     View Live Platform <ExternalLink size={16} />
                   </a>
