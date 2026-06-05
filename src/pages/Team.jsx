@@ -266,14 +266,14 @@ export const teamMembers = [
     image: "https://www.shambhavitechnovation.com/assets/images/harsh-panchal.jpg",
     socials: { linkedin: "#", github: "#", twitter: "#" }
   },
-  {
-    id: 16,
-    name: "Jaydip Balas",
-    role: "Mobile App Developer",
-    bio: "Specializes in designing and building mobile applications.",
-    image: "https://www.shambhavitechnovation.com/assets/images/jaydip.jpg",
-    socials: { linkedin: "#", github: "#", twitter: "#" }
-  },
+  // {
+  //   id: 16,
+  //   name: "Jaydip Balas",
+  //   role: "Mobile App Developer",
+  //   bio: "Specializes in designing and building mobile applications.",
+  //   image: "https://www.shambhavitechnovation.com/assets/images/jaydip.jpg",
+  //   socials: { linkedin: "#", github: "#", twitter: "#" }
+  // },
   {
     id: 17,
     name: "Jay Prajapati",
