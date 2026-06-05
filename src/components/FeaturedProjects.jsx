@@ -281,7 +281,7 @@ const projects = [
     tech: ["Voice-to-Website", "Smart Assistant"],
     bgClass: "bg-[#0a0a0a]",
     link: "/work/explore",
-    image: "/images/move-ayumanager.png" 
+    image: "/images/move-wikipoint.png" 
   }
 ];
 
