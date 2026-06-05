@@ -2,14 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const WhatsAppFloat = () => {
-    const phoneNumber = "9104711572";
+    const phoneNumber = "919104711572";
     const message = "Hi! I'd like to know more about your services.";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    // const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
     return (
         <motion.a
             href={url}
-            target="_blank"
+            target="_self"
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0 }}
             animate={{
