@@ -7,6 +7,8 @@ import ServiceDetail from './pages/ServiceDetail';
 import './css/Footer.css';
 import Team from './pages/Team';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import ChatButton from './components/ChatButton';
+import WhatsAppFloat from './components/Whatsup';
 function App() {
   return (
     <BrowserRouter>
@@ -32,6 +34,8 @@ function App() {
        </main>
         
         <Footer />
+        <WhatsAppFloat />
+        <ChatButton />
         <ScrollToTopButton />
       </div>
     </BrowserRouter>
