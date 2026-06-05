@@ -41,7 +41,9 @@ function Footer() {
             Architecting the future of software
             development with precision and innovation.
           </p>
-          <div className="flex items-center justify-center md:justify-start gap-4 w-full mt-4">
+          {/* <div className="flex items-center justify-center md:justify-start gap-4 w-full mt-4"> */}
+          <div className="flex items-center justify-center lg:justify-start gap-4 w-full mt-4">
+          
           {/* LinkedIn */}
           <a 
             href="#" 
