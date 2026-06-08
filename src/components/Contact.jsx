@@ -159,7 +159,7 @@ const Contact = () => {
       1. Changed min-h-[80vh] to min-h-screen to permanently fix the tablet gap.
       2. Adjusted padding (py-16 md:py-20 lg:py-24) for better tablet spacing.
     */
-    <section id="contact" className="min-h-screen flex items-center bg-[#faf9f6] dark:bg-slate-950 py-16 md:py-20 lg:py-24 px-6 md:px-12 border-t border-slate-200 dark:border-slate-800 transition-colors duration-500">
+    <section id="contact" className="min-h-screen flex items-center bg-[#faf9f6] dark:bg-slate-950 pt-28 pb-16 md:py-20 lg:py-24 px-6 md:px-12 border-t border-slate-200 dark:border-slate-800 transition-colors duration-500">
       <div className="max-w-7xl mx-auto w-full">
         
         {/* On tablet (md), this stays 1 column. On desktop (lg), it splits to 2 columns */}
